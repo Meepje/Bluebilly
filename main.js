@@ -3,18 +3,17 @@ var con=0;
 var div= document.getElementById("cardDiv");
 
 function getPost() {
-    fetch ('https://jsonplaceholder.typicode.com/photos')
+    fetch ('data.json')
     .then((res)=>{
         return res.json();
     })
-    .then((post)=>{
+    .then((data)=>{
         for (let index = 0; index < 1; index++) {
             div.innerHTML = `
             <div class="card col-3 m-1 mx-auto">
-                <img class="card-img-top" src="${post[con].thumbnailUrl}">
                 <div class="card-body">
-                    <h5> class="card-title">${post[con].id}<h5>
-                    <p class="card-text">${post[con].title}</p>
+                    <p> class="card-id">${data[con].id}<p>
+                    <p class="card-video">${data[con].videoId}</p>
                 </div>
             </div>
             `        
@@ -26,3 +25,11 @@ function getPost() {
         console.log(error);
     })
 }
+
+// Embed the player in the element "myPlayerDiv". Other playout settings (like width, height, autoPlay) can also be overruled by including them in the object passed as a second parameter:
+var myPlayer = new bluebillywig.Player( "http://demo.bbvms.com/p/default/c/3836075.json", {
+        target : document.getElementById("myPlayerDiv"),
+        autoPlay : "false"
+});
+
+
