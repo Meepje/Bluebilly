@@ -13,16 +13,10 @@ function getPost() {
         con=numberEntered;
 
             div.innerHTML = `
-            <div class="card col-3 m-1 mx-auto">
-                <div class="card-body">
-                    <p> class="card-id">${data[con].id}<p>
-                    <p class="card-video">${data[con].videoId}</p>
-                </div>
-            </div>
+                <p class="card-video">${data[con].videoId}</p>
             `        
-            con=con+1;
 
-            var myPlayer = new bluebillywig.Player( "http://demo.bbvms.com/p/default/c/" + numberEntered + ".json", {
+            var myPlayer = new bluebillywig.Player( "http://demo.bbvms.com/p/default/c/" + data[con].videoId + ".json", {
                     target : document.getElementById("myPlayerDiv"),
                     autoPlay : "false"
             });
