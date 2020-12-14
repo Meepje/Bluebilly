@@ -20,12 +20,14 @@ function getPost() {
                     target : document.getElementById("myPlayerDiv"),
                     autoPlay : "false"
             });
+
+            myPlayer.on('canplay.bbskin', onCanPlay);
+            function onCanPlay(){
+                myPlayer.play();
+            }
     })
 
     .catch((error)=>{
         console.log(error);
     })
 }
-
-
-
