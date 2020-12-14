@@ -9,7 +9,7 @@ function getPost() {
     })
     .then((post)=>{
         for (let index = 0; index < 1; index++) {
-            div.innerHTML += `
+            div.innerHTML = `
             <div class="card col-3 m-1 mx-auto">
                 <img class="card-img-top" src="${post[con].thumbnailUrl}">
                 <div class="card-body">
