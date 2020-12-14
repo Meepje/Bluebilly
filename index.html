@@ -9,9 +9,19 @@
 </head>
 
 <body>
+
+<div class="container">
+    <div class="row">
+        <button id="btn" type="button" class="mt-3 mx-auto btn btn-primary">
+            Get Post
+        </button>
+    </div>
+    <div class="row" id="cardDiv"></div>
+</div>
+
 <div id="myPlayerDiv"></div>
 
-<script>
+<!-- <script>
 // Embed the player in the element "myPlayerDiv". Other playout settings (like width, height, autoPlay) can also be overruled by including them in the object passed as a second parameter:
 var myPlayer = new bluebillywig.Player( "http://demo.bbvms.com/p/default/c/3836075.json", {
         target : document.getElementById("myPlayerDiv"),
@@ -21,7 +31,7 @@ var myPlayer = new bluebillywig.Player( "http://demo.bbvms.com/p/default/c/38360
 // call the play method on the newly created player:
 myPlayer.play();
 
-</script>
+</script> -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
