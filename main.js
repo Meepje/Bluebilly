@@ -25,6 +25,15 @@ function getPost() {
             function onCanPlay(){
                 myPlayer.play();
             }
+
+            myPlayer.on('ended.bb-phase-exit', getPhase);
+            function getPhase() {
+                myPlayer.getPhase();
+
+                if (myPlayer.getPhase() == 'EXIT'){
+                    myPlayer.retractFullscreen();
+                }
+            }
     })
 
     .catch((error)=>{
