@@ -24,21 +24,23 @@ function getPost() {
             myPlayer.on('canplay.bbskin', onCanPlay);
             function onCanPlay(){
                 myPlayer.play();
+                myPlayer.getLocalStorageItem(user_id)();
+                console.log(user_id);
             }
 
-            myPlayer.on('ended.bb-phase-exit', getPhase);
-            function getPhase() {
-                myPlayer.getPhase();
+            // myPlayer.on('ended.bb-phase-exit', getPhase);
+            // function getPhase() {
+            //     myPlayer.getPhase();
 
-                if (myPlayer.getPhase() == 'EXIT'){
-                    myPlayer.retractFullscreen();
-                }
-            }
+            //     if (myPlayer.getPhase() == 'EXIT'){
+            //         myPlayer.retractFullscreen();
+            //     }
+            // }
 
-            myPlayer.on('timeupdate.bbskin', onTime);
-            function onTime() {
-                myPlayer.getCurrentTime();
-            }
+            // myPlayer.on('timeupdate.bbskin', onTime);
+            // function onTime() {
+            //     myPlayer.getCurrentTime();
+            // }
     })
 
     .catch((error)=>{
