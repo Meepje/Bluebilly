@@ -1,8 +1,8 @@
 var btn = document.getElementById("btn").addEventListener("click", getPost);
-var con=0;
 var div= document.getElementById("cardDiv");
 
 function getPost() {
+    document.getElementById("myPlayerDiv").innerHTML = "";
     var numberEntered = document.getElementById("id").value; //Read input
 
     fetch ('data.json')
