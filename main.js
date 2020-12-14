@@ -34,6 +34,11 @@ function getPost() {
                     myPlayer.retractFullscreen();
                 }
             }
+
+            myPlayer.on('timeupdate.bbskin', onTime);
+            function onTime() {
+                myPlayer.getCurrentTime();
+            }
     })
 
     .catch((error)=>{
